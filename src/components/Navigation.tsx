@@ -34,9 +34,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-primary-100 flex items-center justify-center">
-              <div className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-neutral-100"></div>
-            </div>
+            <img 
+              src="/lovable-uploads/0110f188-f0a3-4a4e-a9e4-bac825c43a77.png" 
+              alt="Portfolio Logo" 
+              className="w-8 h-8 lg:w-10 lg:h-10 object-contain"
+            />
             <span className="text-lg lg:text-xl font-semibold text-primary-100">Portfolio</span>
           </Link>
 
