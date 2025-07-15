@@ -25,7 +25,7 @@ const PortfolioTwo = () => {
 
   const caseStudy = {
     title: "Consectetur Adipiscing Elit",
-    subtitle: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    subtitle: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliquaa.",
     category: "Dolor Sit Amet",
     client: "Adipiscing Elit",
     location: "Lorem Ipsum",
