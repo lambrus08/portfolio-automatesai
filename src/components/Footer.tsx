@@ -1,43 +1,174 @@
-import { Linkedin } from "lucide-react";
+import { Linkedin, Youtube, ArrowRight, ArrowLeft } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
-const Footer = () => {
-  return (
-    <footer className="bg-dark-100 text-neutral-100 py-12">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Logo and Description */}
-          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-full bg-dark-100"></div>
-              </div>
-              <span className="text-lg font-semibold">Portfolio</span>
+interface FooterProps {
+  homeLeft?: boolean;
+  casesLeft?: boolean;
+}
+
+const Footer = ({ homeLeft, casesLeft }: FooterProps) => {
+  const location = useLocation();
+  const path = location.pathname;
+
+  // Determine which buttons to show
+  let navSection = null;
+  let leftSection = <div className="flex-1"></div>;
+
+  if (path === "/") {
+    navSection = (
+      <Link
+        to="/portfolio"
+        className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+      >
+        <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Next</span>
+        <div className="flex items-center space-x-1">
+          <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Portfolio</span>
+          <ArrowRight size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:translate-x-1 transition-all duration-300" />
+        </div>
+      </Link>
+    );
+  } else if (path === "/cases") {
+    if (homeLeft) {
+      leftSection = (
+        <div className="flex-1 flex justify-start pl-8">
+          <Link
+            to="/"
+            className="flex flex-col items-start group hover:scale-105 transition-transform duration-300"
+          >
+            <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
+            <div className="flex items-center space-x-1">
+              <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
+              <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Home</span>
             </div>
-            <p className="text-neutral-400 text-sm text-center md:text-left max-w-md">
-              Building innovative AI systems and sharing insights about technology, 
-              development, and the future of digital experiences.
-            </p>
-          </div>
-
-          {/* Social Links */}
-          <div className="flex items-center space-x-6">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-dark-200 hover:bg-dark-300 transition-colors duration-200"
-              aria-label="LinkedIn Profile"
-            >
-              <Linkedin size={20} />
-            </a>
-          </div>
+          </Link>
         </div>
-
-        <div className="border-t border-dark-300 mt-8 pt-8 text-center">
-          <p className="text-neutral-500 text-sm">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
-          </p>
+      );
+      navSection = (
+        <Link
+          to="/blog"
+          className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+        >
+          <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Next</span>
+          <div className="flex items-center space-x-1">
+            <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Blog</span>
+            <ArrowRight size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:translate-x-1 transition-all duration-300" />
+          </div>
+        </Link>
+      );
+    } else {
+      navSection = (
+        <div className="flex flex-col items-end space-y-2">
+          <Link
+            to="/"
+            className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+          >
+            <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
+            <div className="flex items-center space-x-1">
+              <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
+              <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Home</span>
+            </div>
+          </Link>
+          <Link
+            to="/blog"
+            className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+          >
+            <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Next</span>
+            <div className="flex items-center space-x-1">
+              <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Blog</span>
+              <ArrowRight size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:translate-x-1 transition-all duration-300" />
+            </div>
+          </Link>
         </div>
+      );
+    }
+  } else if (path === "/blog") {
+    if (casesLeft) {
+      leftSection = (
+        <div className="flex-1 flex justify-start pl-8">
+          <Link
+            to="/portfolio"
+            className="flex flex-col items-start group hover:scale-105 transition-transform duration-300"
+          >
+            <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
+            <div className="flex items-center space-x-1">
+              <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
+              <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Portfolio</span>
+            </div>
+          </Link>
+        </div>
+      );
+      navSection = null;
+    } else {
+      navSection = (
+        <Link
+          to="/portfolio"
+          className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+        >
+          <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
+          <div className="flex items-center space-x-1">
+            <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
+            <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Portfolio</span>
+          </div>
+        </Link>
+      );
+    }
+  } else if (path === "/portfolio") {
+    leftSection = (
+      <div className="flex-1 flex justify-start pl-8">
+        <Link
+          to="/"
+          className="flex flex-col items-start group hover:scale-105 transition-transform duration-300"
+        >
+          <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
+          <div className="flex items-center space-x-1">
+            <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
+            <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Home</span>
+          </div>
+        </Link>
+      </div>
+    );
+    navSection = (
+      <Link
+        to="/blog"
+        className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+      >
+        <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Next</span>
+        <div className="flex items-center space-x-1">
+          <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Blog</span>
+          <ArrowRight size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:translate-x-1 transition-all duration-300" />
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <footer className="bg-primary-100 pt-0 pb-4 relative overflow-hidden">
+      <div className="relative z-10 w-full flex flex-row items-center justify-between max-w-7xl mx-auto">
+        {/* Left side (Home/Cases link if homeLeft/casesLeft) */}
+        {leftSection}
+        {/* Social Icons - Center */}
+        <div className="flex-1 flex justify-center items-center space-x-4">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-2xl bg-neutral-800 hover:bg-neutral-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
+            aria-label="LinkedIn Profile"
+          >
+            <Linkedin size={14} className="text-neutral-100" />
+          </a>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-2xl bg-neutral-800 hover:bg-neutral-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
+            aria-label="YouTube Channel"
+          >
+            <Youtube size={14} className="text-neutral-100" />
+          </a>
+        </div>
+        {/* Next/Previous Navigation - Far Right, stacked */}
+        <div className="flex-1 flex justify-end pr-8 min-h-[60px]">{navSection}</div>
       </div>
     </footer>
   );
