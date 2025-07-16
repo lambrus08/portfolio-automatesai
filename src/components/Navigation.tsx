@@ -55,7 +55,7 @@ const Navigation = ({ blendWithHero = false, navSolid = false }) => {
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0 overflow-hidden hover:scale-105 transition-transform duration-300">
             <img 
-              src="/portfolio-automatesai/uploads/automatesai-logo.png" 
+              src="/uploads/automatesai-logo.png" 
               alt="Portfolio Logo" 
               className="h-16 lg:h-20 object-contain max-w-full"
             />

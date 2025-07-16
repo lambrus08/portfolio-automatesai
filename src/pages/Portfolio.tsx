@@ -107,12 +107,12 @@ const Portfolio = () => {
                   {cases[0].category === "Software Development" ? (
                     <>
                       <img
-                        src="/portfolio-automatesai/uploads/banner-cases-2.png"
+                        src="/uploads/banner-cases-2.png"
                         alt={cases[0].title}
                         className="w-full h-full object-cover"
                       />
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute top-4 left-4 w-10 h-10 object-contain"
                       />
@@ -121,7 +121,7 @@ const Portfolio = () => {
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-dark-100 to-dark-300 w-full h-full"></div>
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute inset-0 m-auto w-20 h-20 object-contain filter drop-shadow-lg"
                         style={{ top: '0', left: '0', right: '0', bottom: '0' }}
@@ -173,12 +173,12 @@ const Portfolio = () => {
                   {cases[1].category === "Software Development" ? (
                     <>
                       <img
-                        src="/portfolio-automatesai/uploads/banner-cases-2.png"
+                        src="/uploads/banner-cases-2.png"
                         alt={cases[1].title}
                         className="w-full h-full object-cover"
                       />
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute top-4 left-4 w-10 h-10 object-contain"
                       />
@@ -187,7 +187,7 @@ const Portfolio = () => {
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-dark-100 to-dark-300 w-full h-full"></div>
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute inset-0 m-auto w-20 h-20 object-contain filter drop-shadow-lg"
                         style={{ top: '0', left: '0', right: '0', bottom: '0' }}
@@ -239,12 +239,12 @@ const Portfolio = () => {
                   {cases[2].category === "Software Development" ? (
                     <>
                       <img
-                        src="/portfolio-automatesai/uploads/banner-cases-2.png"
+                        src="/uploads/banner-cases-2.png"
                         alt={cases[2].title}
                         className="w-full h-full object-cover"
                       />
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute top-4 left-4 w-10 h-10 object-contain"
                       />
@@ -253,7 +253,7 @@ const Portfolio = () => {
                     <>
                       <div className="absolute inset-0 bg-gradient-to-br from-dark-100 to-dark-300 w-full h-full"></div>
                       <img
-                        src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                        src="/uploads/automatesai-icon.png"
                         alt="Logo"
                         className="absolute inset-0 m-auto w-20 h-20 object-contain filter drop-shadow-lg"
                         style={{ top: '0', left: '0', right: '0', bottom: '0' }}

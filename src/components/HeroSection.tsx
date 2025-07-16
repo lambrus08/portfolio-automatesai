@@ -53,7 +53,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl ring-4 ring-neutral-200/50 hover:ring-neutral-300/50 transition-all duration-300 transform hover:scale-105">
                 <img
-                  src="/portfolio-automatesai/uploads/porfolio-pic-enhance.png"
+                  src="/uploads/porfolio-pic-enhance.png"
                   alt="AI Systems Developer"
                   className="w-full h-full object-cover bg-neutral-200"
                   style={{ objectPosition: '0 30%' }}
