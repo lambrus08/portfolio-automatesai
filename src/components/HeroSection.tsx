@@ -25,7 +25,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className="min-h-[60vh] flex items-center bg-gradient-to-br from-neutral-100 via-neutral-200 to-neutral-100 pt-10 relative overflow-hidden">
+    <section ref={heroRef} className="min-h-[60vh] flex items-center bg-gradient-to-br from-neutral-100 via-neutral-200 to-neutral-100 pt-20 md:pt-10 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-neutral-100/50 to-transparent"></div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">

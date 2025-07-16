@@ -82,27 +82,11 @@ const Footer = ({ homeLeft, casesLeft }: FooterProps) => {
       );
     }
   } else if (path === "/blog") {
-    if (casesLeft) {
-      leftSection = (
-        <div className="flex-1 flex justify-start pl-8">
-          <Link
-            to="/portfolio"
-            className="flex flex-col items-start group hover:scale-105 transition-transform duration-300"
-          >
-            <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
-            <div className="flex items-center space-x-1">
-              <ArrowLeft size={14} className="text-neutral-100 group-hover:text-neutral-200 group-hover:-translate-x-1 transition-all duration-300" />
-              <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Portfolio</span>
-            </div>
-          </Link>
-        </div>
-      );
-      navSection = null;
-    } else {
-      navSection = (
+    leftSection = (
+      <div className="flex-1 flex justify-start pl-8">
         <Link
           to="/portfolio"
-          className="flex flex-col items-end group hover:scale-105 transition-transform duration-300"
+          className="flex flex-col items-start group hover:scale-105 transition-transform duration-300"
         >
           <span className="text-neutral-300 text-sm mb-0.5 group-hover:text-neutral-200 transition-colors">Previous</span>
           <div className="flex items-center space-x-1">
@@ -110,8 +94,9 @@ const Footer = ({ homeLeft, casesLeft }: FooterProps) => {
             <span className="text-neutral-100 text-xl font-semibold group-hover:text-neutral-200 transition-colors">Portfolio</span>
           </div>
         </Link>
-      );
-    }
+      </div>
+    );
+    navSection = null;
   } else if (path === "/portfolio") {
     leftSection = (
       <div className="flex-1 flex justify-start pl-8">
