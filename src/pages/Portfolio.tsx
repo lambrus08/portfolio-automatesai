@@ -99,7 +99,7 @@ const Portfolio = () => {
             <div style={{gridArea: 'a'}}>
               <Card 
                 key={cases[0].id}
-                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative"
+                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative mb-8 md:mb-0"
               >
                 {/* Glow */}
                 <div className="absolute -inset-4 z-0 rounded-2xl bg-primary-100/20 blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
@@ -165,7 +165,7 @@ const Portfolio = () => {
             <div style={{gridArea: 'b'}}>
               <Card 
                 key={cases[1].id}
-                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative"
+                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative mb-8 md:mb-0"
               >
                 {/* Glow */}
                 <div className="absolute -inset-4 z-0 rounded-2xl bg-primary-100/20 blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
@@ -231,7 +231,7 @@ const Portfolio = () => {
             <div style={{gridArea: 'c'}}>
               <Card 
                 key={cases[2].id}
-                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative"
+                className="case-card opacity-0 group hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 bg-neutral-100 border-0 shadow-lg overflow-hidden rounded-2xl relative mb-8 md:mb-0"
               >
                 {/* Glow */}
                 <div className="absolute -inset-4 z-0 rounded-2xl bg-primary-100/20 blur-2xl opacity-60 group-hover:opacity-80 transition-all duration-500"></div>
