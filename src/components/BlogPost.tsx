@@ -30,37 +30,39 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, date, author, image, childre
   }, [setNavbarStyle]);
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen flex flex-col"
       style={{ background: "radial-gradient(ellipse 20% 100% at 50% 0%, #383838 0%, #202026 0%, #383838 0%, #000000 100%)" }}
     >
       <Navigation />
-      <section className="pt-32 pb-12 text-neutral-100 relative overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-100 to-neutral-300 bg-clip-text text-transparent leading-tight">
-              {title}
-            </h1>
-            <div className="flex flex-col items-center justify-center gap-2 mb-4 text-neutral-300 text-sm">
-              <span>{date}</span>
-              {author && <span>By {author}</span>}
+      <div className="flex-1">
+        <section className="pt-32 pb-12 text-neutral-100 relative overflow-hidden">
+          <div className="container mx-auto px-4 lg:px-8 relative z-10">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-neutral-100 to-neutral-300 bg-clip-text text-transparent leading-tight">
+                {title}
+              </h1>
+              <div className="flex flex-col items-center justify-center gap-2 mb-4 text-neutral-300 text-sm">
+                <span>{date}</span>
+                {author && <span>By {author}</span>}
+              </div>
+              {image && (
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full max-h-96 object-cover rounded-2xl shadow-lg mb-8 border border-neutral-700"
+                />
+              )}
             </div>
-            {image && (
-              <img
-                src={image}
-                alt={title}
-                className="w-full max-h-96 object-cover rounded-2xl shadow-lg mb-8 border border-neutral-700"
-              />
-            )}
           </div>
-        </div>
-      </section>
-      <section className="py-12 bg-gradient-to-b from-neutral-100 to-neutral-200">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-3xl mx-auto prose prose-lg prose-neutral prose-headings:text-primary-100 prose-a:text-primary-100 prose-strong:text-primary-100 text-neutral-800 bg-white/80 rounded-2xl shadow-xl p-8">
-            {children}
+        </section>
+        <section className="py-12 bg-gradient-to-b from-neutral-100 to-neutral-200 flex-1">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="max-w-3xl mx-auto prose prose-lg prose-neutral prose-headings:text-primary-100 prose-a:text-primary-100 prose-strong:text-primary-100 text-neutral-800 bg-white/80 rounded-2xl shadow-xl p-8">
+              {children}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <Footer />
     </div>
   );

@@ -123,7 +123,7 @@ const Blog = () => {
                 <p className="text-neutral-600 text-lg mb-6">
                   {blogPosts[0].excerpt}
                 </p>
-                <div className="flex items-center justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex items-center gap-4 text-neutral-500 text-sm">
                     <div className="flex items-center gap-1">
                       <Calendar size={16} />
@@ -135,7 +135,7 @@ const Blog = () => {
                     </div>
                   </div>
                   <Link to="/blog-post-one">
-                    <Button>
+                    <Button className="w-full sm:w-auto">
                       Read More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -180,26 +180,28 @@ const Blog = () => {
                       {post.excerpt}
                     </p>
                     
-                    <div className="flex items-center gap-4 text-neutral-500 text-sm mb-4">
-                      <div className="flex items-center gap-1">
-                        <Calendar size={14} />
-                        {formatDate(post.date)}
+                    <div className="flex flex-col gap-4 text-neutral-500 text-sm mb-4">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-1">
+                          <Calendar size={14} />
+                          {formatDate(post.date)}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock size={14} />
+                          {post.readTime}
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock size={14} />
-                        {post.readTime}
-                      </div>
+                      
+                      <Link to={index === 0 ? "/blog-post-two" : "/blog-post-three"}>
+                        <Button 
+                          variant="outline" 
+                          className="w-full group-hover:bg-primary-100 group-hover:text-neutral-100 transition-colors"
+                        >
+                          Read Article
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
                     </div>
-                    
-                    <Link to={index === 0 ? "/blog-post-two" : "/blog-post-three"}>
-                      <Button 
-                        variant="outline" 
-                        className="w-full group-hover:bg-primary-100 group-hover:text-neutral-100 transition-colors"
-                      >
-                        Read Article
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
                   </CardContent>
                 </Card>
               ))}

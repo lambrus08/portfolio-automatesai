@@ -94,7 +94,7 @@ const Portfolio = () => {
       {/* Portfolio Grid */}
       <section ref={casesRef} className="py-20 bg-gradient-to-b from-neutral-100 to-neutral-200">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 grid-rows-2 md:grid-rows-2" style={{gridTemplateAreas: '"a b" "c ."'}}>
+          <div className="portfolio-grid-custom grid grid-cols-1 md:grid-cols-2 gap-12 grid-rows-2 md:grid-rows-2" style={{gridTemplateAreas: '"a b" "c ."'}}>
             {/* Top left */}
             <div style={{gridArea: 'a'}}>
               <Card 
