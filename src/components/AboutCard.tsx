@@ -10,7 +10,7 @@ const AboutCard = () => {
         {/* Icon with black circular background */}
         <div className="w-24 h-24 rounded-full mb-4 shadow-lg border-4 border-primary-100 bg-black flex items-center justify-center">
           <img
-            src="/portfolio-automatesai/uploads/automatesai-icon.png"
+            src="/uploads/automatesai-icon.png"
             alt="AutomatesAI Icon"
             className="w-16 h-16 object-contain"
           />

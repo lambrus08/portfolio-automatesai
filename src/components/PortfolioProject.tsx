@@ -90,7 +90,7 @@ const PortfolioProject = ({ caseStudy }: PortfolioProjectProps) => {
               {/* Sidebar Icon */}
               <div className="lg:col-span-1 hidden lg:flex items-center justify-center">
                 <img
-                  src="/portfolio-automatesai/uploads/automatesai-icon.png"
+                  src="/uploads/automatesai-icon.png"
                   alt="AutomatesAI Icon"
                   className="w-32 h-32 object-contain opacity-80"
                 />
